@@ -19,7 +19,10 @@ body {
 main,
 .top-nav,
 footer {
-  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-left: 1px solid #d9d5ca;
+  border-right: 1px solid #d9d5ca;
 }
 
 .top-nav {
@@ -32,49 +35,19 @@ footer {
 }
 
 .brand {
-  font-family: "Cormorant Garamond", serif;
-  line-height: 1;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 2.4vw, 2.85rem);
 }
 
 .brand span {
   font-style: italic;
 }
 
-.brand-logo-primary {
-  font-size: clamp(2.4rem, 4vw, 5rem);
-}
-
-.brand-logo-secondary {
-  font-size: clamp(2rem, 2.6vw, 3.2rem);
-}
-
-.brand-mark {
-  width: 74px;
-  height: 92px;
-  border: 3px solid rgba(64, 58, 54, 0.92);
-  border-radius: 999px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
-  font-style: italic;
-  color: rgba(64, 58, 54, 0.92);
-  display: grid;
-  place-items: center;
-  background: rgba(248, 244, 239, 0.68);
-}
-
-.mark-about {
-  margin-bottom: 8px;
-}
-
-.mark-services {
-  margin: 0 auto 6px;
-}
-
 .top-nav nav,
 footer nav {
   display: flex;
   gap: 34px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 2rem;
 }
@@ -92,10 +65,8 @@ footer a {
 
 .hero {
   min-height: 365px;
-  background-image: radial-gradient(circle at 55% 40%, rgba(132, 122, 111, 0.45), rgba(62, 56, 52, 0.6)),
-    url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover;
-  background-position: center;
+  background: radial-gradient(circle at 55% 40%, rgba(132, 122, 111, 0.6), rgba(62, 56, 52, 0.65)),
+    linear-gradient(100deg, #5a5550 0%, #938b82 48%, #5a5550 100%);
 }
 
 .overlay {
@@ -117,9 +88,8 @@ footer a {
 .hero p,
 .offer h2,
 .about h2,
-.services h2,
-.book-call h2 {
-  font-family: "Cormorant Garamond", serif;
+.services h2 {
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 500;
   margin: 0;
@@ -145,7 +115,7 @@ footer a {
   display: inline-block;
   padding: 14px 0;
   color: var(--text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(1.1rem, 2.2vw, 2.35rem);
   animation: slide 28s linear infinite;
@@ -177,8 +147,7 @@ footer a {
 }
 
 .left-photo {
-  background-image: linear-gradient(130deg, rgba(18, 18, 18, 0.2) 0%, rgba(232, 225, 214, 0.15) 55%, rgba(184, 168, 146, 0.2) 100%),
-    url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80");
+  background-image: linear-gradient(130deg, #121212 0%, #e8e1d6 55%, #b8a892 100%);
 }
 
 .pill {
@@ -186,13 +155,10 @@ footer a {
   border-radius: 999px;
   background: var(--offwhite);
   color: var(--brown);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(1.3rem, 2.5vw, 3.2rem);
   padding: 8px 28px;
-  display: inline-block;
-  text-decoration: none;
-  line-height: 1.1;
 }
 
 .copy {
@@ -217,10 +183,7 @@ footer a {
 
 .about {
   min-height: 740px;
-  background-image: linear-gradient(140deg, rgba(29, 28, 26, 0.72) 0%, rgba(77, 70, 63, 0.6) 60%, rgba(23, 22, 22, 0.78) 100%),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(140deg, #1d1c1a 0%, #4d463f 60%, #171616 100%);
 }
 
 .about-content {
@@ -284,16 +247,16 @@ article {
 }
 
 .photo-1 {
-  background-image: url("https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=900&q=80");
+  background-image: linear-gradient(150deg, #8c7f71 0%, #d8ceb9 100%);
 }
 .photo-2 {
-  background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80");
+  background-image: linear-gradient(150deg, #3e4734 0%, #c3cab6 100%);
 }
 .photo-3 {
-  background-image: url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80");
+  background-image: linear-gradient(150deg, #101113 0%, #8f8d8a 100%);
 }
 .photo-4 {
-  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
+  background-image: linear-gradient(150deg, #282523 0%, #bab2a4 100%);
 }
 
 article .pill {
@@ -305,64 +268,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
   padding: 22px 18px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(1.3rem, 2vw, 2.2rem);
-}
-
-.book-call {
-  background: var(--cream);
-  color: var(--brown);
-  padding: 32px 24px 40px;
-}
-
-.book-call h2 {
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  text-align: center;
-}
-
-.book-call > p {
-  text-align: center;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
-  margin: 8px 0 24px;
-}
-
-.book-form {
-  max-width: 980px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.book-form label {
-  display: grid;
-  gap: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.book-form input,
-.book-form select,
-.book-form textarea {
-  border: 1px solid #8d8478;
-  border-radius: 8px;
-  background: #f6f3ea;
-  color: #2f2a25;
-  font: inherit;
-  padding: 12px;
-}
-
-.book-form .full {
-  grid-column: 1 / -1;
-}
-
-.form-submit {
-  justify-self: start;
-  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -376,7 +285,6 @@ footer {
   .split,
   .about-content,
   .service-grid,
-  .book-form,
   footer {
     grid-template-columns: 1fr;
     flex-direction: column;

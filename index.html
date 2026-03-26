@@ -7,21 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="top-nav" id="home">
-      <div class="brand brand-logo-primary" aria-label="Lochside Creative logo">
-        · Lochside<span>Creative</span> ·
-      </div>
+    <header class="top-nav">
+      <div class="brand">· Lochside<span>Creative</span> ·</div>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about-us">About us</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
         <a href="#services">Services</a>
-        <a href="#book-a-call">Book a call</a>
+        <a href="#">Book a call</a>
       </nav>
     </header>
 
@@ -42,7 +40,7 @@
 
       <section class="offer split panel">
         <div class="photo-card left-photo">
-          <a class="pill" href="#book-a-call">Book a call</a>
+          <button class="pill">Book a call</button>
         </div>
         <div class="copy">
           <h2>
@@ -58,121 +56,70 @@
         </div>
       </section>
 
-      <section class="about panel" id="about-us">
+      <section class="about panel">
         <div class="overlay"></div>
         <div class="about-content">
           <div>
-            <div class="brand-mark mark-about" aria-hidden="true">LS</div>
-            <h2>About us</h2>
+            <h2>Lets work together</h2>
             <p>
-              Lochside Creative is built by you and Molly to help service-based
-              businesses grow with confidence and consistency.
+              Growing your business becomes so much easier when your marketing
+              does the heavy lifting for you.
             </p>
             <p>And that’s exactly what we do.</p>
             <p>
-              Together, you combine strategy-led social media management,
-              premium content production, and intentional brand direction that
-              makes ambitious businesses feel instantly more established online.
+              Lochside Creative exists to help service-based businesses grow
+              with intention - through social media, standout content, and
+              branding that positions you as the expert you are.
             </p>
             <p>
-              You and Molly work closely with every client to create a clear
-              message, standout visuals, and content that turns attention into
-              trust and trust into booked-out calendars.
+              We’re here for the business owners who are done trying to do
+              everything themselves... who want to feel proud of how they show
+              up online... and who are ready for marketing that actually
+              supports their goals.
             </p>
             <p>
-              Every detail is designed to look premium, feel authentic, and
-              support the next stage of each client’s growth.
+              Everything we create is strategic, thought-out, and aligned with
+              where you’re heading - not just where you are right now.
             </p>
           </div>
           <div class="about-actions">
-            <a class="pill" href="#book-a-call">Book a call</a>
-            <a class="pill" href="#services">All the gear</a>
-            <a class="pill" href="#services">No idea</a>
+            <button class="pill">Book a call</button>
+            <button class="pill">All the gear</button>
+            <button class="pill">No idea</button>
           </div>
         </div>
       </section>
 
       <section class="services" id="services">
-        <div class="brand-mark mark-services" aria-hidden="true">LS</div>
         <h2>SERVICES</h2>
         <div class="service-grid">
           <article>
             <div class="service-photo photo-1"></div>
-            <span class="pill">Floor typing</span>
+            <button class="pill">Floor typing</button>
           </article>
           <article>
             <div class="service-photo photo-2"></div>
-            <span class="pill">Not being ready</span>
+            <button class="pill">Not being ready</button>
           </article>
           <article>
             <div class="service-photo photo-3"></div>
-            <span class="pill">Next modeling</span>
+            <button class="pill">Next modeling</button>
           </article>
           <article>
             <div class="service-photo photo-4"></div>
-            <span class="pill">Sticking things on walls</span>
+            <button class="pill">Sticking things on walls</button>
           </article>
         </div>
-      </section>
-
-      <section class="book-call panel" id="book-a-call">
-        <h2>Book a call</h2>
-        <p>Tell us about your business and pick a preferred date.</p>
-        <form
-          class="book-form"
-          action="mailto:hello@lochsidecreative.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <label>
-            Full name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@email.com" required />
-          </label>
-          <label>
-            Business name
-            <input type="text" name="business" placeholder="Your business" required />
-          </label>
-          <label>
-            Service needed
-            <select name="service" required>
-              <option value="">Select a service</option>
-              <option>Social media management</option>
-              <option>Content creation</option>
-              <option>Branding</option>
-              <option>Full package</option>
-            </select>
-          </label>
-          <label>
-            Preferred date
-            <input type="date" name="preferred_date" required />
-          </label>
-          <label class="full">
-            Notes
-            <textarea
-              name="notes"
-              rows="4"
-              placeholder="Share your goals, availability, and what support you need."
-            ></textarea>
-          </label>
-          <button type="submit" class="pill form-submit">Send request</button>
-        </form>
       </section>
     </main>
 
     <footer>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about-us">About us</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
         <a href="#services">Services</a>
-        <a href="#book-a-call">Book a call</a>
+        <a href="#">Book a call</a>
       </nav>
-      <div class="brand brand-logo-secondary" aria-label="Lochside Creative">
-        Lochside<span>Creative</span>
-      </div>
       <div>MADE BY A FRICKEN LEGEND</div>
     </footer>
   </body>
