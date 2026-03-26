@@ -1,8 +1,10 @@
 :root {
-  --brown: #3d3632;
-  --cream: #e3e0d1;
-  --offwhite: #f3f0e7;
-  --text: #efede6;
+  --brown: #403a36;
+  --cream: #e1ddcd;
+  --sand: #c0b5a1;
+  --offwhite: #f8f4ef;
+  --text: #f8f4ef;
+  --charcoal: #252525;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
   margin: 0;
   background: #000;
   color: var(--text);
-  font-family: Inter, sans-serif;
+  font-family: Manrope, sans-serif;
   overflow-x: hidden;
 }
 
@@ -45,6 +47,8 @@ footer {
 .brand {
   font-family: "Cormorant Garamond", serif;
   line-height: 1;
+  display: grid;
+  gap: 2px;
 }
 
 .brand span {
@@ -56,7 +60,19 @@ footer {
 }
 
 .brand-logo-secondary {
-  font-size: clamp(2rem, 2.6vw, 3.2rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+}
+
+.logo-main {
+  display: block;
+}
+
+.logo-sub {
+  display: block;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  letter-spacing: 0.08em;
+  font-weight: 400;
 }
 
 .brand-mark {
@@ -163,19 +179,25 @@ footer a:hover {
   border-bottom: 1px solid #d9d5ca;
 }
 
-.ticker div {
+.ticker-track {
+  display: flex;
+  width: max-content;
   white-space: nowrap;
-  display: block;
-  padding: 14px 0;
+  padding: 12px 0;
+  animation: ticker-roll 24s linear infinite;
+}
+
+.ticker-track span {
+  padding-right: 2.25rem;
   color: var(--text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: Manrope, sans-serif;
   font-style: italic;
-  font-size: clamp(1.1rem, 2.2vw, 2.35rem);
-  text-align: center;
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  letter-spacing: 0.03em;
 }
 
 .trust-strip {
-  background: #252525;
+  background: var(--charcoal);
   color: #f8f4ef;
   text-align: center;
   padding: 8px 16px;
@@ -196,6 +218,15 @@ footer a:hover {
   }
 }
 
+@keyframes ticker-roll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -213,7 +244,7 @@ footer a:hover {
 }
 
 .left-photo {
-  background-color: #b7ab9b;
+  background-color: var(--sand);
   background-image: linear-gradient(130deg, rgba(18, 18, 18, 0.2) 0%, rgba(232, 225, 214, 0.15) 55%, rgba(184, 168, 146, 0.2) 100%),
     url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80");
 }
@@ -260,8 +291,8 @@ footer a:hover {
 }
 
 .offer-metrics div {
-  background: rgba(61, 54, 50, 0.08);
-  border: 1px solid rgba(61, 54, 50, 0.2);
+  background: rgba(64, 58, 54, 0.08);
+  border: 1px solid rgba(64, 58, 54, 0.2);
   border-radius: 12px;
   padding: 10px;
   text-align: center;
@@ -421,10 +452,10 @@ footer {
 .book-form input,
 .book-form select,
 .book-form textarea {
-  border: 1px solid #8d8478;
+  border: 1px solid var(--sand);
   border-radius: 8px;
   background: #f6f3ea;
-  color: #2f2a25;
+  color: var(--charcoal);
   font: inherit;
   padding: 12px;
 }
@@ -432,7 +463,7 @@ footer {
 .book-form input:focus,
 .book-form select:focus,
 .book-form textarea:focus {
-  outline: 2px solid #8e8478;
+  outline: 2px solid var(--sand);
   outline-offset: 1px;
 }
 
