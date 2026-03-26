@@ -18,6 +18,7 @@ body {
   background: #000;
   color: var(--text);
   font-family: Inter, sans-serif;
+  overflow-x: hidden;
 }
 
 main,
@@ -30,29 +31,20 @@ footer {
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 82px;
+  min-height: 82px;
   background: rgba(61, 54, 50, 0.95);
   backdrop-filter: blur(8px);
-  max-width: 1280px;
-  margin: 0 auto;
-  border-left: 1px solid #d9d5ca;
-  border-right: 1px solid #d9d5ca;
-}
-
-.top-nav {
-  height: 82px;
-  background: var(--brown);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
   padding: 0 26px;
 }
 
 .brand {
   font-family: "Cormorant Garamond", serif;
   line-height: 1;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 2.4vw, 2.85rem);
 }
 
 .brand span {
@@ -60,7 +52,7 @@ footer {
 }
 
 .brand-logo-primary {
-  font-size: clamp(2.4rem, 4vw, 5rem);
+  font-size: clamp(2rem, 3.2vw, 3.6rem);
 }
 
 .brand-logo-secondary {
@@ -92,11 +84,10 @@ footer {
 .top-nav nav,
 footer nav {
   display: flex;
-  gap: 34px;
+  gap: clamp(14px, 2.2vw, 34px);
   font-family: "Cormorant Garamond", serif;
-  font-family: "Playfair Display", serif;
   font-style: italic;
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
 .top-nav a,
@@ -123,12 +114,11 @@ footer a:hover {
 
 .hero {
   min-height: 365px;
+  background-color: #6e655d;
   background-image: radial-gradient(circle at 55% 40%, rgba(132, 122, 111, 0.45), rgba(62, 56, 52, 0.6)),
     url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
-  background: radial-gradient(circle at 55% 40%, rgba(132, 122, 111, 0.6), rgba(62, 56, 52, 0.65)),
-    linear-gradient(100deg, #5a5550 0%, #938b82 48%, #5a5550 100%);
 }
 
 .overlay {
@@ -153,8 +143,6 @@ footer a:hover {
 .services h2,
 .book-call h2 {
   font-family: "Cormorant Garamond", serif;
-.services h2 {
-  font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 500;
   margin: 0;
@@ -177,14 +165,13 @@ footer a:hover {
 
 .ticker div {
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   padding: 14px 0;
   color: var(--text);
   font-family: "Cormorant Garamond", serif;
-  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(1.1rem, 2.2vw, 2.35rem);
-  animation: slide 28s linear infinite;
+  text-align: center;
 }
 
 .trust-strip {
@@ -226,9 +213,9 @@ footer a:hover {
 }
 
 .left-photo {
+  background-color: #b7ab9b;
   background-image: linear-gradient(130deg, rgba(18, 18, 18, 0.2) 0%, rgba(232, 225, 214, 0.15) 55%, rgba(184, 168, 146, 0.2) 100%),
     url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80");
-  background-image: linear-gradient(130deg, #121212 0%, #e8e1d6 55%, #b8a892 100%);
 }
 
 .pill {
@@ -243,10 +230,6 @@ footer a:hover {
   display: inline-block;
   text-decoration: none;
   line-height: 1.1;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: clamp(1.3rem, 2.5vw, 3.2rem);
-  padding: 8px 28px;
 }
 
 .copy {
@@ -296,13 +279,11 @@ footer a:hover {
 
 .about {
   min-height: 740px;
+  background-color: #3f3a36;
   background-image: linear-gradient(140deg, rgba(29, 28, 26, 0.72) 0%, rgba(77, 70, 63, 0.6) 60%, rgba(23, 22, 22, 0.78) 100%),
     url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
-.about {
-  min-height: 740px;
-  background: linear-gradient(140deg, #1d1c1a 0%, #4d463f 60%, #171616 100%);
 }
 
 .about-content {
@@ -376,16 +357,6 @@ article {
 }
 .photo-4 {
   background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
-  background-image: linear-gradient(150deg, #8c7f71 0%, #d8ceb9 100%);
-}
-.photo-2 {
-  background-image: linear-gradient(150deg, #3e4734 0%, #c3cab6 100%);
-}
-.photo-3 {
-  background-image: linear-gradient(150deg, #101113 0%, #8f8d8a 100%);
-}
-.photo-4 {
-  background-image: linear-gradient(150deg, #282523 0%, #bab2a4 100%);
 }
 
 article .pill {
@@ -401,8 +372,6 @@ footer {
   flex-wrap: wrap;
   padding: 22px 18px;
   font-family: "Cormorant Garamond", serif;
-  padding: 22px 18px;
-  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(1.3rem, 2vw, 2.2rem);
 }
@@ -486,7 +455,7 @@ footer {
 
 @media (max-width: 1000px) {
   .top-nav {
-    height: auto;
+    min-height: auto;
     flex-direction: column;
     gap: 12px;
     padding: 14px;
