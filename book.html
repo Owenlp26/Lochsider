@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Call — Lochside Creative</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qtt5jcd.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Lochside Creative home">
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="cta active" href="book.html">Book a call</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="book.html" class="active">Book a call</a>
+    </nav>
+
+    <main>
+      <div class="book-split">
+
+        <!-- LEFT: INTRO -->
+        <div class="book-intro" style="background-image: url('assets/lochsidecreative-009.JPG'); background-size: cover; background-position: center;">
+          <div class="book-intro-top">
+            <span class="eyebrow light">Let's talk</span>
+            <h2>Book a free<br>discovery call</h2>
+            <p>
+              No pressure, no pitch — just an honest conversation about your business,
+              where you're at, and where you want to go.
+            </p>
+            <p>
+              We'll figure out together whether Lochside Creative is the right fit for you.
+            </p>
+
+            <div class="book-contact">
+              <p class="book-contact-label">Email us directly</p>
+              <a href="mailto:hello@lochsidecreative.com">hello@lochsidecreative.com</a>
+            </div>
+            <div class="book-contact" style="margin-top:1.2rem">
+              <p class="book-contact-label">Find us on Instagram</p>
+              <a href="https://instagram.com/lochsidecreative" target="_blank" rel="noopener">@lochsidecreative</a>
+            </div>
+          </div>
+          <img class="book-intro-badge" src="assets/logo-badge-dark.png" alt="" aria-hidden="true" />
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div class="book-form-wrap">
+          <h3>Tell us about yourself</h3>
+          <form class="book-form" id="bookForm">
+            <label>
+              Full name
+              <input type="text" name="name" required placeholder="Jane Smith" />
+            </label>
+            <label>
+              Email address
+              <input type="email" name="email" required placeholder="jane@example.com" />
+            </label>
+            <label>
+              Business name
+              <input type="text" name="business" required placeholder="Jane Smith Photography" />
+            </label>
+            <label>
+              Preferred date
+              <input type="date" name="preferred_date" required />
+            </label>
+            <label class="full">
+              What's your biggest marketing challenge right now?
+              <textarea name="notes" rows="4" placeholder="Tell us where you are now and where you want to be."></textarea>
+            </label>
+            <div class="full" style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+              <button class="btn btn-dark" type="submit">Send request</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-brand">
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative — Marketing Agency" />
+        <p>Premium social media marketing for service-based businesses.</p>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book.html">Book a call</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@lochsidecreative.com">hello@lochsidecreative.com</a></li>
+          <li><a href="https://instagram.com/lochsidecreative" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Lochside Creative. All rights reserved.</span>
+        <span>Owen &amp; Molly</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
