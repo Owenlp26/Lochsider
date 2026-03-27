@@ -3,119 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lochside Creative</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Lochside Creative — Premium Marketing Agency</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qtt5jcd.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" id="home">
-      <a class="logo" href="#home" aria-label="Lochside Creative home">
-        <img src="assets/logo-primary.svg" alt="Lochside Creative logo" />
+
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Lochside Creative home">
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative" />
       </a>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About us</a>
-        <a href="#services">Services</a>
-        <a class="cta" href="#book">Book a call</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="cta" href="book.html">Book a call</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="book.html">Book a call</a>
+    </nav>
+
     <main>
-      <section class="hero" aria-label="Lochside Creative hero">
-        <div class="hero-inner">
-          <p class="eyebrow">PREMIUM SOCIAL MEDIA MARKETING</p>
-          <h1>For Service-Based Businesses</h1>
-          <p class="hero-copy">
-            Strategy-led social media, premium content, and branding that helps
-            you grow with confidence.
-          </p>
-          <a class="primary-btn" href="#book">Book a call</a>
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Hero" style="--hero-img: url('assets/lochsidecreative-144.JPG')">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="eyebrow light">Premium Social Media Marketing</span>
+            <h1>We make service<br>businesses <em>impossible</em><br>to ignore.</h1>
+            <p class="hero-copy">
+              We help ambitious service-based businesses grow through strategy-led content, premium visuals, and a brand that finally reflects your standards — so you can increase bookings, show up with confidence, and get the freedom you started your business for.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="book.html">Book a discovery call</a>
+              <a class="btn btn-outline" href="services.html">Our services</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <img class="hero-badge" src="assets/logo-badge-dark.png" alt="" />
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat reveal">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Clients Served</span>
+          </div>
+          <div class="hero-stat reveal">
+            <span class="stat-num">3×</span>
+            <span class="stat-label">Avg. Engagement Growth</span>
+          </div>
+          <div class="hero-stat reveal">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Done For You</span>
+          </div>
         </div>
       </section>
 
+      <!-- PHOTO MOSAIC -->
+      <section class="photo-mosaic" aria-label="Brand shoot">
+        <div class="mosaic-img">
+          <img src="assets/lochsidecreative-046.JPG" alt="Lochside Creative brand shoot" />
+        </div>
+        <div class="mosaic-img">
+          <img src="assets/addedlochside-10.JPG" alt="Lochside Creative brand shoot" />
+        </div>
+        <div class="mosaic-img">
+          <img src="assets/lochsidecreative-004.JPG" alt="Lochside Creative brand shoot" />
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
       <section class="marquee" aria-label="Brand statement">
-        <div class="marquee-track">
-          <span>THE GREATEST MARKETING AGENCY IN THE FRICKEN WORLD •</span>
-          <span>THE GREATEST MARKETING AGENCY IN THE FRICKEN WORLD •</span>
-          <span>THE GREATEST MARKETING AGENCY IN THE FRICKEN WORLD •</span>
+        <div class="marquee-track" aria-hidden="true">
+          <span>Lochside Creative — Premium Marketing Agency •</span>
+          <span>Strategy. Content. Brand. Growth •</span>
+          <span>Lochside Creative — Premium Marketing Agency •</span>
+          <span>Strategy. Content. Brand. Growth •</span>
+          <span>Lochside Creative — Premium Marketing Agency •</span>
+          <span>Strategy. Content. Brand. Growth •</span>
         </div>
       </section>
 
-      <section class="about" id="about">
-        <div>
-          <p class="eyebrow dark">ABOUT US</p>
-          <h2>Built by you and Molly</h2>
-          <p>
-            Lochside Creative helps service-based businesses look premium online
-            and convert attention into bookings.
-          </p>
-          <p>
-            You and Molly blend strategic social media management, standout
-            content, and intentional brand positioning.
-          </p>
-        </div>
-        <div class="about-card">
-          <h3>What clients get</h3>
-          <ul>
-            <li>Clear strategy and content direction</li>
-            <li>Consistent, premium visual identity</li>
-            <li>Marketing support that drives real momentum</li>
-          </ul>
+      <!-- TESTIMONIAL -->
+      <section class="testimonial-section reveal">
+        <span class="eyebrow dark">Client love</span>
+        <h2>Don't just take<br><em>our word for it</em></h2>
+        <div class="testimonial-video-wrap">
+          <video controls playsinline poster="">
+            <source src="assets/debbie-testimonial.mov" type="video/mp4" />
+          </video>
+          <div class="testimonial-caption">
+            <p class="testimonial-name">Debbie</p>
+            <p class="testimonial-role">Lochside Creative client</p>
+          </div>
         </div>
       </section>
 
-      <section class="services" id="services">
-        <p class="eyebrow dark">SERVICES</p>
-        <h2>Everything you need to grow online</h2>
-        <div class="services-grid">
-          <article>
+      <!-- SERVICES TEASER -->
+      <section class="services-teaser">
+        <div class="section-header reveal">
+          <div>
+            <span class="eyebrow dark">What we do</span>
+            <h2>Everything you need<br>to grow online</h2>
+          </div>
+          <a class="btn btn-dark" href="services.html">View all services</a>
+        </div>
+        <div class="service-cards">
+          <div class="service-card reveal">
+            <span class="service-num">01</span>
             <h3>Social Media Management</h3>
-            <p>Planning, posting, and platform growth with intention.</p>
-          </article>
-          <article>
+            <p>Done-for-you strategy, premium content, and community management — helping you build authority, generate consistent enquiries, and grow organically without spending hours online.</p>
+            <a class="service-card-link" href="services.html">Learn more →</a>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">02</span>
             <h3>Content Creation</h3>
-            <p>Premium visual content built for trust and conversion.</p>
-          </article>
-          <article>
-            <h3>Brand Direction</h3>
-            <p>Refined messaging and visuals that position you as the expert.</p>
-          </article>
-          <article>
-            <h3>Full Package</h3>
-            <p>End-to-end support across strategy, content, and execution.</p>
-          </article>
+            <p>Strategic, story-led content designed to position you as an industry leader and attract your dream clients — without the guesswork or the burnout.</p>
+            <a class="service-card-link" href="services.html">Learn more →</a>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">03</span>
+            <h3>Branding &amp; Brand Strategy</h3>
+            <p>Strategic brand identities that set you apart, build trust, attract your ideal clients, and reflect the true standards of your business — built to last.</p>
+            <a class="service-card-link" href="services.html">Learn more →</a>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">04</span>
+            <h3>Website Design &amp; Build</h3>
+            <p>A custom, conversion-focused website built by our in-house designer — premium, fast, and built around your brand.</p>
+            <a class="service-card-link" href="services.html">Learn more →</a>
+          </div>
         </div>
       </section>
 
-      <section class="book" id="book">
-        <p class="eyebrow dark">BOOK A CALL</p>
-        <h2>Request your date</h2>
-        <form class="book-form" action="mailto:hello@lochsidecreative.com" method="post" enctype="text/plain">
-          <label>Full name <input type="text" name="name" required /></label>
-          <label>Email <input type="email" name="email" required /></label>
-          <label>Business name <input type="text" name="business" required /></label>
-          <label>
-            Preferred date
-            <input type="date" name="preferred_date" required />
-          </label>
-          <label class="full">
-            Notes
-            <textarea name="notes" rows="4" placeholder="Tell us where you are now and where you want to be."></textarea>
-          </label>
-          <button class="primary-btn" type="submit">Send request</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+      <!-- CTA BANNER -->
+      <section class="cta-banner">
+        <span class="eyebrow light">Ready to grow?</span>
+        <h2>Done trying to<br><em>do it all yourself?</em></h2>
+        <p class="hero-copy">
+          You didn't start your business to spend your evenings posting on Instagram, second-guessing every caption, or trying to DIY your brand. You started it for freedom. That's exactly where we come in.
+        </p>
+        <a class="btn btn-light" href="book.html">Book a free call</a>
       </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <img class="footer-logo" src="assets/logo-primary.svg" alt="Lochside Creative logo" />
-      <a href="#home">Back to top</a>
+      <div class="footer-brand">
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative — Marketing Agency" />
+        <p>Premium social media marketing for service-based businesses.</p>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book.html">Book a call</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@lochsidecreative.com">hello@lochsidecreative.com</a></li>
+          <li><a href="https://instagram.com/lochsidecreative" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Lochside Creative. All rights reserved.</span>
+        <span>Owen &amp; Molly</span>
+      </div>
     </footer>
 
     <script src="script.js"></script>
