@@ -4,18 +4,26 @@
 const navToggle = document.querySelector('.nav-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
+const setMenu = (open) => {
+  mobileMenu?.classList.toggle('open', open);
+  navToggle?.classList.toggle('open', open);
+  navToggle?.setAttribute('aria-expanded', open);
+  navToggle?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+};
+
 navToggle?.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-expanded', isOpen);
+  setMenu(!mobileMenu.classList.contains('open'));
 });
 
 mobileMenu?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    navToggle?.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', () => setMenu(false));
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) {
+    setMenu(false);
+    navToggle?.focus();
+  }
 });
 
 /* ===================================
@@ -55,18 +63,37 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ===================================
-   BOOKING FORM
+   FOOTER YEAR
    =================================== */
-const form = document.getElementById('bookForm') || document.querySelector('.book-form');
+document.querySelectorAll('[data-year]').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
+
+/* ===================================
+   ENQUIRY FORM
+   =================================== */
+const form = document.getElementById('bookForm');
 const dateInput = form?.querySelector('input[name="preferred_date"]');
-const statusEl = form?.querySelector('.form-status');
+const serviceChecks = form ? Array.from(form.querySelectorAll('#serviceChecks input')) : [];
 
 if (dateInput) {
+  // Local date, so it isn't a day off around midnight during BST
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  dateInput.min = tomorrow.toISOString().split('T')[0];
+  const pad = (n) => String(n).padStart(2, '0');
+  dateInput.min = `${tomorrow.getFullYear()}-${pad(tomorrow.getMonth() + 1)}-${pad(tomorrow.getDate())}`;
 }
 
-form?.addEventListener('submit', () => {
-  if (statusEl) statusEl.textContent = 'Opening your email app…';
+// "Enquire about …" buttons on the services page pre-tick the matching service
+const preselect = new URLSearchParams(location.search).get('service');
+serviceChecks.forEach(box => {
+  if (box.dataset.service === preselect) box.checked = true;
 });
+
+// At least one service must be chosen
+const validateServices = () => {
+  const anyChecked = serviceChecks.some(box => box.checked);
+  serviceChecks[0]?.setCustomValidity(anyChecked ? '' : 'Please choose at least one service.');
+};
+serviceChecks.forEach(box => box.addEventListener('change', validateServices));
+validateServices();

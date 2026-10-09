@@ -1,48 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Call — Lochside Creative</title>
-    <meta name="description" content="Enquire with Lochside Creative — social media management, content creation, content shoots and branding for ambitious service-based businesses." />
+    <title>Work With Us | Lochside Creative</title>
+    <meta name="description" content="Enquire about working with Lochside Creative: social media management, content creation, content shoots and branding for service-based businesses." />
+    <link rel="canonical" href="https://lochsidecreative.com/book.html" />
+    <meta name="theme-color" content="#403a36" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lochside Creative" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Work With Us | Lochside Creative" />
+    <meta property="og:description" content="Enquire about working with Lochside Creative: social media management, content creation, content shoots and branding for service-based businesses." />
+    <meta property="og:url" content="https://lochsidecreative.com/book.html" />
+    <meta property="og:image" content="https://lochsidecreative.com/assets/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
     <link rel="stylesheet" href="https://use.typekit.net/qtt5jcd.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <a class="logo" href="index.html" aria-label="Lochside Creative home">
-        <img src="assets/logo-wordmark.png" alt="Lochside Creative" />
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative" width="2207" height="537" />
       </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a class="cta active" href="book.html">Book a call</a>
+        <a class="cta active" href="book.html">Work with us</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </header>
 
-    <nav class="mobile-menu" aria-label="Mobile navigation">
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="book.html" class="active">Book a call</a>
+      <a href="book.html" class="active">Work with us</a>
     </nav>
 
-    <main>
+    <main id="main">
       <div class="book-split">
 
         <!-- LEFT: INTRO -->
-        <div class="book-intro" style="background-image: url('assets/lochsidecreative-009.JPG'); background-size: cover; background-position: center;">
+        <div class="book-intro" style="background-image: url('assets/img/lochsidecreative-009-1400.webp'); background-size: cover; background-position: center;">
           <div class="book-intro-top">
             <span class="eyebrow light">Let's talk</span>
-            <h2>Book a free<br>discovery call</h2>
+            <h1>Book a free<br>discovery call</h1>
             <p>
-              No pressure, no pitch — just an honest conversation about your business,
-              where you're at, and where you want to go.
+              No pressure, no pitch. Just an honest conversation about your business,
+              where you're at, and where you want to go. Fill in the form and we'll be in touch to arrange a time.
             </p>
             <p>
               We'll figure out together whether Lochside Creative is the right fit for you.
@@ -57,79 +75,98 @@
               <a href="https://instagram.com/lochsidecreative" target="_blank" rel="noopener">@lochsidecreative</a>
             </div>
           </div>
-          <img class="book-intro-badge" src="assets/logo-badge-dark.png" alt="" aria-hidden="true" />
+          <img class="book-intro-badge" src="assets/logo-badge-dark.png" alt="" aria-hidden="true" width="1959" height="1796" loading="lazy" />
         </div>
 
         <!-- RIGHT: FORM -->
         <div class="book-form-wrap">
-          <h3>Enquire</h3>
+          <h2 class="visually-hidden">Enquiry form</h2>
+          <p class="form-note">Fields marked * are required.</p>
           <form class="book-form" id="bookForm">
-            <label>
-              First name*
-              <input type="text" name="first_name" required />
-            </label>
-            <label>
-              Last name*
-              <input type="text" name="last_name" required />
-            </label>
-            <label>
-              Business name*
-              <input type="text" name="business" required />
-            </label>
-            <label>
-              Instagram handle*
-              <input type="text" name="instagram" required placeholder="@" />
-            </label>
-            <label>
-              Email*
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Preferred call date
-              <input type="date" name="preferred_date" />
-            </label>
-            <label class="full">
-              What services do you offer?*
-              <input type="text" name="your_services" required />
-            </label>
-            <label class="full">
-              Tell us more about your business… (how long you've been running, relevant information)*
-              <textarea name="about_business" rows="3" required></textarea>
-            </label>
-            <label class="full">
-              What are your current marketing efforts?*
-              <textarea name="marketing_efforts" rows="3" required></textarea>
-            </label>
-            <label class="full">
-              What platforms do you need support on?*
-              <input type="text" name="platforms" required />
-            </label>
-            <label class="full">
-              What are your current struggles?*
-              <textarea name="struggles" rows="3" required></textarea>
-            </label>
-            <label class="full">
-              Why do you want to work with us?*
-              <textarea name="why_us" rows="3" required></textarea>
-            </label>
-            <label>
-              What is your monthly budget?*
-              <input type="text" name="budget" required />
-            </label>
-            <label>
-              How did you hear about us?*
-              <input type="text" name="heard_about" required />
-            </label>
-            <fieldset class="full">
-              <legend>Which services are you interested in? (Please choose all that apply)*</legend>
-              <label class="check"><input type="checkbox" name="interested[]" value="Social Media Management" /> Social Media Management</label>
-              <label class="check"><input type="checkbox" name="interested[]" value="Content Creation" /> Content Creation</label>
-              <label class="check"><input type="checkbox" name="interested[]" value="Content Shoot" /> Content Shoot</label>
-              <label class="check"><input type="checkbox" name="interested[]" value="Branding" /> Branding</label>
-              <label class="check"><input type="checkbox" name="interested[]" value="Website Design" /> Website Design</label>
+            <fieldset class="form-group">
+              <legend>About you</legend>
+              <label>
+                <span>First name<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="first_name" autocomplete="given-name" required />
+              </label>
+              <label>
+                <span>Last name<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="last_name" autocomplete="family-name" required />
+              </label>
+              <label>
+                <span>Email<span class="req" aria-hidden="true">*</span></span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Business name<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="business" autocomplete="organization" required />
+              </label>
+              <label>
+                <span>Instagram handle<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="instagram" required placeholder="@yourbusiness" />
+              </label>
+              <label>
+                <span>Preferred call date</span>
+                <input type="date" name="preferred_date" />
+              </label>
             </fieldset>
-            <div class="full" style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
-              <button class="btn btn-dark" type="submit">Submit</button>
+
+            <fieldset class="form-group">
+              <legend>Your business</legend>
+              <label class="full">
+                <span>What services do you offer?<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="your_services" required />
+              </label>
+              <label class="full">
+                <span>Tell us more about your business (how long you've been running, anything relevant)<span class="req" aria-hidden="true">*</span></span>
+                <textarea name="about_business" rows="3" required></textarea>
+              </label>
+              <label class="full">
+                <span>What are your current marketing efforts?<span class="req" aria-hidden="true">*</span></span>
+                <textarea name="marketing_efforts" rows="3" required></textarea>
+              </label>
+              <label class="full">
+                <span>What platforms do you need support on?<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="platforms" required placeholder="e.g. Instagram, TikTok, Facebook" />
+              </label>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>How we can help</legend>
+              <label class="full">
+                <span>What are your current struggles?<span class="req" aria-hidden="true">*</span></span>
+                <textarea name="struggles" rows="3" required></textarea>
+              </label>
+              <label class="full">
+                <span>Why do you want to work with us?<span class="req" aria-hidden="true">*</span></span>
+                <textarea name="why_us" rows="3" required></textarea>
+              </label>
+              <fieldset class="checks full" id="serviceChecks">
+                <legend>Which services are you interested in? Choose all that apply.<span class="req" aria-hidden="true">*</span></legend>
+                <label class="check"><input type="checkbox" name="interested[]" value="Social Media Management" data-service="social" /> Social Media Management</label>
+                <label class="check"><input type="checkbox" name="interested[]" value="Content Creation" data-service="content" /> Content Creation</label>
+                <label class="check"><input type="checkbox" name="interested[]" value="Content Shoot" data-service="shoot" /> Content Shoot</label>
+                <label class="check"><input type="checkbox" name="interested[]" value="Branding" data-service="branding" /> Branding</label>
+                <label class="check"><input type="checkbox" name="interested[]" value="Website Design" data-service="website" /> Website Design</label>
+              </fieldset>
+              <label>
+                <span>What is your monthly budget?<span class="req" aria-hidden="true">*</span></span>
+                <select name="budget" required>
+                  <option value="" disabled selected>Choose a range</option>
+                  <option>£500–£1,000 per month</option>
+                  <option>£1,000–£2,000 per month</option>
+                  <option>£2,000+ per month</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+              <label>
+                <span>How did you hear about us?<span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="heard_about" required />
+              </label>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="btn btn-dark" type="submit">Send enquiry</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </div>
           </form>
@@ -141,20 +178,20 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer-brand">
-        <img src="assets/logo-wordmark.png" alt="Lochside Creative — Marketing Agency" />
+        <img src="assets/logo-wordmark.png" alt="Lochside Creative Marketing Agency" width="2207" height="537" loading="lazy" />
         <p>Social media management, content &amp; branding for ambitious service-based businesses.</p>
       </div>
       <div class="footer-nav-col">
-        <h4>Pages</h4>
+        <h2 class="footer-heading">Pages</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="book.html">Book a call</a></li>
+          <li><a href="book.html">Work with us</a></li>
         </ul>
       </div>
       <div class="footer-nav-col">
-        <h4>Services</h4>
+        <h2 class="footer-heading">Services</h2>
         <ul>
           <li><a href="services.html#social-media-management">Social Media Management</a></li>
           <li><a href="services.html#content-creation">Content Creation</a></li>
@@ -164,15 +201,15 @@
         </ul>
       </div>
       <div class="footer-nav-col">
-        <h4>Contact</h4>
+        <h2 class="footer-heading">Contact</h2>
         <ul>
           <li><a href="mailto:hello@lochsidecreative.com">hello@lochsidecreative.com</a></li>
           <li><a href="https://instagram.com/lochsidecreative" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Lochside Creative. All rights reserved.</span>
-        <span>Owen &amp; Molly</span>
+        <span>© <span data-year>2026</span> Lochside Creative. All rights reserved.</span>
+        <span>Family run by Molly &amp; Owen</span>
       </div>
     </footer>
 
