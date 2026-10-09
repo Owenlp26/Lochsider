@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book a Call — Lochside Creative</title>
+    <meta name="description" content="Enquire with Lochside Creative — social media management, content creation, content shoots and branding for ambitious service-based businesses." />
     <link rel="stylesheet" href="https://use.typekit.net/qtt5jcd.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -61,30 +62,74 @@
 
         <!-- RIGHT: FORM -->
         <div class="book-form-wrap">
-          <h3>Tell us about yourself</h3>
+          <h3>Enquire</h3>
           <form class="book-form" id="bookForm">
             <label>
-              Full name
-              <input type="text" name="name" required placeholder="Jane Smith" />
+              First name*
+              <input type="text" name="first_name" required />
             </label>
             <label>
-              Email address
-              <input type="email" name="email" required placeholder="jane@example.com" />
+              Last name*
+              <input type="text" name="last_name" required />
             </label>
             <label>
-              Business name
-              <input type="text" name="business" required placeholder="Jane Smith Photography" />
+              Business name*
+              <input type="text" name="business" required />
             </label>
             <label>
-              Preferred date
-              <input type="date" name="preferred_date" required />
+              Instagram handle*
+              <input type="text" name="instagram" required placeholder="@" />
+            </label>
+            <label>
+              Email*
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Preferred call date
+              <input type="date" name="preferred_date" />
             </label>
             <label class="full">
-              What's your biggest marketing challenge right now?
-              <textarea name="notes" rows="4" placeholder="Tell us where you are now and where you want to be."></textarea>
+              What services do you offer?*
+              <input type="text" name="your_services" required />
             </label>
+            <label class="full">
+              Tell us more about your business… (how long you've been running, relevant information)*
+              <textarea name="about_business" rows="3" required></textarea>
+            </label>
+            <label class="full">
+              What are your current marketing efforts?*
+              <textarea name="marketing_efforts" rows="3" required></textarea>
+            </label>
+            <label class="full">
+              What platforms do you need support on?*
+              <input type="text" name="platforms" required />
+            </label>
+            <label class="full">
+              What are your current struggles?*
+              <textarea name="struggles" rows="3" required></textarea>
+            </label>
+            <label class="full">
+              Why do you want to work with us?*
+              <textarea name="why_us" rows="3" required></textarea>
+            </label>
+            <label>
+              What is your monthly budget?*
+              <input type="text" name="budget" required />
+            </label>
+            <label>
+              How did you hear about us?*
+              <input type="text" name="heard_about" required />
+            </label>
+            <fieldset class="full">
+              <legend>Which services are you interested in? (Please choose all that apply)*</legend>
+              <label class="check"><input type="checkbox" name="interested[]" value="Social Media Management" /> Social Media Management</label>
+              <label class="check"><input type="checkbox" name="interested[]" value="Content Creation" /> Content Creation</label>
+              <label class="check"><input type="checkbox" name="interested[]" value="Content Shoot" /> Content Shoot</label>
+              <label class="check"><input type="checkbox" name="interested[]" value="Branding" /> Branding</label>
+              <label class="check"><input type="checkbox" name="interested[]" value="Website Design" /> Website Design</label>
+            </fieldset>
             <div class="full" style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
-              <button class="btn btn-dark" type="submit">Send request</button>
+              <button class="btn btn-dark" type="submit">Submit</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </div>
           </form>
@@ -97,7 +142,7 @@
     <footer>
       <div class="footer-brand">
         <img src="assets/logo-wordmark.png" alt="Lochside Creative — Marketing Agency" />
-        <p>Premium social media marketing for service-based businesses.</p>
+        <p>Social media management, content &amp; branding for ambitious service-based businesses.</p>
       </div>
       <div class="footer-nav-col">
         <h4>Pages</h4>
@@ -106,6 +151,16 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="book.html">Book a call</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#social-media-management">Social Media Management</a></li>
+          <li><a href="services.html#content-creation">Content Creation</a></li>
+          <li><a href="services.html#content-shoots">Content Shoots</a></li>
+          <li><a href="services.html#branding">Branding &amp; Brand Strategy</a></li>
+          <li><a href="services.html#website-design">Website Design &amp; Build</a></li>
         </ul>
       </div>
       <div class="footer-nav-col">
