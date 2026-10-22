@@ -126,20 +126,23 @@ if (timeline) {
    =================================== */
 document.querySelectorAll('[data-count]').forEach(el => {
   const target = parseFloat(el.dataset.count);
+  const decimals = parseInt(el.dataset.decimals || '0', 10);
+  const fmt = (n) => n.toLocaleString('en-GB', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
   if (reduceMotion || Number.isNaN(target)) return;
-  el.textContent = '0';
+  // The real number stays in place until the animation actually starts
   inView(el, (e, io) => {
     if (!e.isIntersecting) return;
     io.unobserve(el);
+    el.textContent = fmt(0);
     const start = performance.now();
     const dur = 1400;
     const step = (now) => {
       const t = Math.min(1, (now - start) / dur);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+      el.textContent = fmt(target * (1 - Math.pow(1 - t, 3)));
       if (t < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
-  }, { threshold: 0.6 });
+  }, { threshold: 0.5 });
 });
 
 /* ===================================
