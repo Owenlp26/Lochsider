@@ -242,8 +242,7 @@ body > main { padding-top: var(--header-h); }
   background-image: var(--hero-img);
   background-size: cover;
   background-position: center 40%;
-  opacity: 0.55;
-  filter: grayscale(0.15);
+  opacity: 0.85;
   z-index: 0;
 }
 .hero::after {
@@ -251,8 +250,8 @@ body > main { padding-top: var(--header-h); }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(37,37,37,0.93) 0%, rgba(37,37,37,0.84) 50%, rgba(37,37,37,0.4) 100%),
-    linear-gradient(0deg, rgba(37,37,37,0.75) 0%, transparent 35%);
+    linear-gradient(90deg, rgba(37,37,37,0.82) 0%, rgba(37,37,37,0.6) 45%, rgba(37,37,37,0.1) 100%),
+    linear-gradient(0deg, rgba(37,37,37,0.7) 0%, transparent 30%);
   z-index: 0;
 }
 .hero-grid,
@@ -1807,7 +1806,7 @@ footer {
    =================================== */
 @media (max-width: 700px) {
   .hero::before { background-position: 18% center; }
-  .hero::after { background: linear-gradient(180deg, rgba(37,37,37,0.7) 0%, rgba(37,37,37,0.86) 45%, rgba(37,37,37,0.92) 100%); }
+  .hero::after { background: linear-gradient(180deg, rgba(37,37,37,0.45) 0%, rgba(37,37,37,0.72) 45%, rgba(37,37,37,0.88) 100%); }
 }
 
 @media (max-width: 900px) {
