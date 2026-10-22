@@ -568,7 +568,7 @@ body > main { padding-top: var(--header-h); }
   border-radius: 4px;
   display: block;
 }
-.about-photo--low { object-position: center 78%; }
+.about-photo--low { object-position: center 68%; }
 
 /* Meet the team */
 .meet-team {
